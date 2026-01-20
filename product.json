@@ -1,0 +1,92 @@
+{
+    "Popcorn": [
+        {
+            "id": 1,
+            "title": "Bắp rang bơ thường",
+            "image": "https://doiduavang.vn/wp-content/uploads/2023/07/bap-rang-bo.jpg",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 2,
+            "title": "Bắp rang bơ vị caramel",
+            "image": "https://www.dienmaymekong.com/Upload/Editor/2024/12/27/cach-lam-bap-rang-bo-caramel-chuan-vi-bf05.jpg",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 3,
+            "title": "Bắp rang bơ vị matcha",
+            "image": "https://img.vn.my-best.com/content_section/choice_component/sub_contents/336dc4c1ce6be9b2fadb021514d7a481.jpg?ixlib=rails-4.3.1&q=70&lossless=0&w=690&fit=max&s=fff4f6da9e5474ce4444dcbd412ba47d",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 4,
+            "title": "Bắp rang bơ vị socola",
+            "image": "https://doiduavang.vn/wp-content/uploads/2023/07/bap-rang-bo3-1024x577.jpg",
+            "description": "Ngon",
+            "price": "10.000$"
+        }
+    ],
+    "Snack":[
+        {
+            "id": 1,
+            "title": "Bánh snack khoai tây Orion Swing vị bò bít tết",
+            "image": "https://product.hstatic.net/1000288770/product/b_nh_snack_khoai_t_y_orion_swing_v__b__b_t_t_t_48g_master.jpg",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 2,
+            "title": "Snack khoai tây LAY'S tự nhiên",
+            "image": "https://product.hstatic.net/200000078749/product/89_snack_khoai_tay_lay_s_tu_nhien_95g_e814483c921e473fad42243d18a37e2d_da93b86392b74273b5919fc5140b57ec.jpg",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 3,
+            "title": "Snack Oishi Bắp Ngọt",
+            "image": "https://image-cdn.7-eleven.vn/resize?type=webp&width=900&height=900&url=https%3A%2F%2Fcdn.7-eleven.vn%2Fproduction%2Fattachment_v2s%2Ffiles%2F2852_1718857102_original.jpg%3F1718857102",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 4,
+            "title": "Bánh Snack khoai tây LAY'S Phô mai Ched",
+            "image": "https://cdn.hstatic.net/products/200000078749/5129_f15674a44f084df4a8f4165fefb50733_4fc8270c6d2e4fd0a30bdaa32c0920fd_1f021cf0e9844ac4aa8ccc2b39b3b604.png",
+            "description": "Ngon",
+            "price": "10.000$"
+        }
+    ],
+    "Drinks":[
+        {
+            "id": 1,
+            "title": "Nước Coca Cola",
+            "image": "https://www.shutterstock.com/image-photo/full-size-cocacola-plastic-bottle-600nw-2642734713.jpg",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 2,
+            "title": "Nước ngọt Mirinda hương cam",
+            "image": "https://cdn.tgdd.vn/Products/Images/2443/79138/bhx/nuoc-ngot-mirinda-huong-cam-chai-390ml-202310311346499855.jpg",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 3,
+            "title": "Nước ngọt 7 Up vị chanh",
+            "image": "https://cdnv2.tgdd.vn/bhx-static/bhx/Products/Images/2443/76444/bhx/7up-pet-390ml_202509050854517988.jpg",
+            "description": "Ngon",
+            "price": "10.000$"
+        },
+        {
+            "id": 4,
+            "title": "Trà Lipton",
+            "image": "https://bizweb.dktcdn.net/thumb/grande/100/421/036/products/tra-lipton-100-min.png",
+            "description": "Ngon",
+            "price": "10.000$"
+        }
+    ]
+}

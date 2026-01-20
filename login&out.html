@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top "><!--fixed-top: ghim trên đầu-->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">PA Films</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="type.html">Thể loại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shopping.html">Mua sắm</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a style="display: flex; align-items: center; gap: 2px;" class="nav-link active"
+                            aria-current="page" href="login&out.html"><ion-icon
+                                name="person-circle-outline"></ion-icon>Đăng ký / Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                            type="button" role="tab" aria-controls="login" aria-selected="true">Đăng nhập</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register"
+                            type="button" role="tab" aria-controls="register" aria-selected="false">Đăng ký</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <!-- Login Form -->
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <form action="#" method="POST" class="mt-3">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="loginEmail" name="email" required
+                                    placeholder="Nhập email của bạn">
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginPassword" class="form-label">Mật khẩu:</label>
+                                <input type="password" class="form-control" id="loginPassword" name="password" required
+                                    placeholder="Nhập mật khẩu của bạn">
+                            </div>
+                            <button type="submit" class="btnlog btn-primary"><a href="index.html">Đăng nhập</a></button>
+                        </form>
+                    </div>
+                    <!-- Register Form -->
+                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <form action="#" method="POST" class="mt-3">
+                            <div class="mb-3">
+                                <label for="registerName" class="form-label">Tên tài khoản:</label>
+                                <input type="text" class="form-control" id="registerName" name="name" required
+                                    placeholder="Nhập tên tài khoản của bạn">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="registerEmail" name="email" required
+                                    placeholder="Nhập email của bạn">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" id="registerPassword" name="password"
+                                    required placeholder="Nhập mật khẩu của bạn">
+                                <label for="registerPassword" class="form-label">Xác nhận mật khẩu:</label>
+                                <input type="password" class="form-control" id="registerPassword" name="password"
+                                    required placeholder="Nhập lại mật khẩu của bạn">
+                            </div>
+                            <button type="submit" class="btnlog btn-success"> <a href="index.html">Đăng ký</a></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Thông tin liên hệ</h3><br>
+        <ul class="contact">
+            <li><a href="https://www.facebook.com/" class="acontact"><ion-icon name="logo-facebook"></ion-icon>
+                    Facebook</a></li>
+            <li><a href="https://www.instagram.com/" class="acontact"><ion-icon name="logo-instagram"></ion-icon>
+                    Instragram</a></li>
+            <li><a href="https://www.tiktok.com/" class="acontact"><ion-icon name="logo-tiktok"></ion-icon> Tiktok</a>
+            </li>
+        </ul>
+        <div class="footer1">
+            <img src="img/5fb1a4d5-f59f-4154-9747-58d17daa5d05.jpg" alt="xem vv">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.032035987264!2d106.61574717401756!3d10.808858258596757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b224555b4d1%3A0xaa7cf57b43e83db1!2sMindX%20Technology%20School%20(T%C3%A2y%20Th%E1%BA%A1nh)!5e0!3m2!1svi!2s!4v1758889951108!5m2!1svi!2s"
+                width="600" height="288" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

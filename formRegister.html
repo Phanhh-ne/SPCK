@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA Films</title>
+    <link rel="stylesheet" href="./formRegister.css">
+</head>
+
+<body>
+    <h2>ĐĂNG KÝ / ĐĂNG NHẬP</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>TẠO TÀI KHOẢN</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>hoặc sử dụng email để đăng ký</span>
+                <input id="e-Sign" type="email" placeholder="Nhập email" />
+                <div id="textEmailSignUp" class="styleText"></div> <!--hỗ trợ khi nhập sai email sẽ hiện thị lỗi ở đây-->
+                <input id="pwd-Sign" type="password" placeholder="Nhập mật khẩu" />
+                <input id="cfPwd-Sign" type="password" placeholder="Nhập lại mật khẩu" />
+                <div id="textPwdSignUp" class="styleText"></div>
+                <button id="btn-SignUp" type="button" class="button" value="Signup">Đăng ký</button>
+            </form> 
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>ĐĂNG NHẬP</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>hoặc sử dụng tài khoản</span>
+                <input id="email-Login" type="email" placeholder="Nhập email" />
+                <input id="pwd-Login" type="password" placeholder="Nhập mật khẩu" />
+                <div id = "textLogin" class = "styleText"></div> 
+                <a href="#">Quên mật khẩu?</a>
+                <button id="btn-Login" type="button" class="button" value="Login">Đăng nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>CHÀO MỪNG TRỞ LẠI!!!</h1>
+                    <p>Để giữ liên lạc với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn.</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>CHÀO BẠN!</h1>
+                    <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình cùng chúng tôi.</p>
+                    <button class="ghost" id="signUp">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Created with <i class="fa fa-heart"></i> by
+            <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+            - Read how I created this and how you can join the challenge
+            <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+        </p>
+    </footer>
+    <script type="module" src="./sign_up.js"></script>
+    <script type="module" src="./log_in.js"></script>
+    <script src="./main.js"></script>
+    <script src="./function_validate.js"></script> 
+</body>
+
+</html>

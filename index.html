@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Calistoga&family=Lalezar&family=Oswald:wght@200..700&family=Playwrite+CA:wght@100..400&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>PA Films</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top "><!--fixed-top: ghim trên đầu-->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">PA Films</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="type.html">Thể loại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shopping.html">Mua sắm</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a style="display: flex; align-items: center; gap: 2px;" class="nav-link active"
+                            aria-current="page" href="./formRegister.html"><ion-icon
+                                name="person-circle-outline"></ion-icon>Đăng ký / Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Silde show -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner ">
+            <!-- Phim 1 -->
+            <div class="carousel-item active">
+                <img class="d-block w-100 slideItem"
+                    src="https://i.pinimg.com/736x/47/1d/ed/471dedfa97c70153d7b9a87c2a1dac09.jpg" alt="Conan movie 9">
+                <div class="carousel-caption d-block d-md-block ">
+                    <div class="carousel-caption-top">
+                        <h5 class="name">Thám Tử Lừng Danh Conan - Movie 9: Âm Mưu Trên Biển</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Phim 2 -->
+            <div class="carousel-item">
+                <img class="d-block w-100 slideItem"
+                    src="https://i.pinimg.com/originals/9b/84/a5/9b84a5efda62f33c1cf971d8dacd8af0.png"
+                    alt="Thám Tử Lừng Danh Conan - Movie 10: Khúc Nhạc Cầu Siêu">
+                <div class="carousel-caption d-block d-md-block">
+                    <div class="carousel-caption-top">
+                        <h5 class="name">Thám Tử Lừng Danh Conan - Movie 10: Khúc Nhạc Cầu Siêu</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Phim 3 -->
+            <div class="carousel-item">
+                <img class="d-block w-100 slideItem"
+                    src="https://1.bp.blogspot.com/-zvn4sKAeegE/WYfJAvFan1I/AAAAAAAAAJQ/0C8gjsfIkTw70y7MySl8nbslBF_Sdz3igCLcBGAs/s1600/proxy%25281%2529.png"
+                    alt="Thám Tử Lừng Danh Conan - Movie 2: Mục Tiêu Thứ 14">
+                <div class="carousel-caption d-block d-md-block">
+                    <div class="carousel-caption-top">
+                        <h5 class="name">Thám Tử Lừng Danh Conan - Movie 2: Mục Tiêu Thứ 14</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Phim 4 -->
+            <div class="carousel-item">
+                <img class="d-block w-100 slideItem"
+                    src="https://m.media-amazon.com/images/M/MV5BYTU5NmNhOWUtM2FkNS00MGQ2LWE2YWItODhkNGEwOTMwZGNhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjgzNDQyMjE@._V1_.jpg"
+                    alt="Doraemon movie 34">
+                <div class="carousel-caption d-block d-md-block">
+                    <div class="carousel-caption-top">
+                        <h5 class="name">Doraemon movie 34</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div><br><br>
+    <!-- About us -->
+    <h3>About Us</h3>
+    <p class="aboutus">Trang web được xây dựng dựa trên nguồn video từ YouTube, mang đến cho bạn một không gian giải trí
+        tiện lợi, dễ
+        dàng tìm và xem những bộ phim, video hay nhất. Tại đây, bạn có thể:
+
+        Xem phim đa dạng thể loại từ hành động, tình cảm, hoạt hình đến tài liệu.
+
+        Dễ dàng tìm kiếm và cập nhật nội dung mới.
+
+        Trải nghiệm giao diện đơn giản, thân thiện.<br>
+
+        👉 Chỉ cần vài cú nhấp chuột, bạn đã có thể thưởng thức kho tàng phim ảnh ngay trên web, hoàn toàn miễn phí và
+        nhanh chóng!</p><br><br>
+
+
+    <!-- Bộ phim phổ biến -->
+    <div class="list">
+        <h3>Bộ phim phổ biến</h3><br>
+        <div class="list__items">
+            <div class="card" style="width: 18rem;">
+                <div class="card__img">
+                    <img src="https://i.pinimg.com/736x/47/1d/ed/471dedfa97c70153d7b9a87c2a1dac09.jpg"
+                        class="card-img-top" alt="Thám Tử Lừng Danh Conan - Movie 9: Âm Mưu Trên Biển">
+                </div>
+
+                <div class="card-body">
+                    <div class="card-2t">
+                        <h5 class="card-title"><a href="detail.html">Thám Tử Lừng Danh Conan - Movie 9: Âm Mưu Trên
+                                Biển</a></h5>
+                        <p class="card-text">Một vụ án mạng trên con tàu sang trọng giữa đại dương.
+                            Ẩn sau chuyến du ngoạn là bí mật về một vụ tai nạn hàng hải năm xưa - và kẻ chủ mưu vẫn đang
+                            âm thầm hành động.</p>
+                    </div>
+                    <a href="https://youtu.be/gnZ0fIBmNDA?si=76IiiYfidIZSq_Yu" class="btn btn-primary">Xem ngay</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card__img">
+                    <img src="https://i.pinimg.com/originals/9b/84/a5/9b84a5efda62f33c1cf971d8dacd8af0.png"
+                        class="card-img-top" alt="Thám Tử Lừng Danh Conan - Movie 10: Khúc Nhạc Cầu Siêu">
+                </div>
+                <div class="card-body">
+                    <div class="card-2t">
+                        <h5 class="card-title"><a href="detail1.html">Thám Tử Lừng Danh Conan - Movie 10: Khúc Nhạc Cầu
+                                Siêu</a></h5>
+                        <p class="card-text">Trong bóng tối của một âm mưu tàn nhẫn, Conan và bạn bè bị biến thành con
+                            tin trong trò chơi sinh tử. Một quả bom đang đếm ngược, những thám tử lừng danh cùng tụ hội,
+                            và chỉ có sự thật mới cứu được tất cả.</p>
+                    </div>
+                    <a href="https://youtu.be/r3shxOMZhOA?si=iRadUZTxQH8aGiZo" class="btn btn-primary">Xem ngay</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card__img">
+                    <img src="https://1.bp.blogspot.com/-zvn4sKAeegE/WYfJAvFan1I/AAAAAAAAAJQ/0C8gjsfIkTw70y7MySl8nbslBF_Sdz3igCLcBGAs/s1600/proxy%25281%2529.png"
+                        class="card-img-top" alt="Thám Tử Lừng Danh Conan - Movie 2: Mục Tiêu Thứ 14">
+                </div>
+                <div class="card-body">
+                    <div class="card-2t">
+                        <h5 class="card-title"><a href="detail2.html">Thám Tử Lừng Danh Conan - Movie 2: Mục Tiêu Thứ
+                                14</a></h5>
+                        <p class="card-text">Một kẻ bí ẩn ra tay theo dấu vết của những quân bài tử thần. Những người
+                            quen biết Kogoro lần lượt trở thành mục tiêu, và Ran cũng không thoát khỏi vòng nguy hiểm.
+                        </p>
+                    </div>
+                    <a href="https://youtu.be/LXCbxr9lJP0?si=euB7Gy0lSx-0yi27" class="btn btn-primary">Xem ngay</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card__img">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYTU5NmNhOWUtM2FkNS00MGQ2LWE2YWItODhkNGEwOTMwZGNhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjgzNDQyMjE@._V1_.jpg"
+                        class="card-img-top" alt="Doraemon movie 34">
+                </div>
+                <div class="card-body">
+                    <div class="card-2t">
+                        <h5 class="card-title"><a href="detail3.html">Doraemon movie 34</a></h5>
+                        <p class="card-text">Một chuyến phiêu lưu vượt ngoài trí tưởng tượng! Nobita và nhóm bạn bất ngờ
+                            trở thành những hiệp sĩ không gian, đối đầu hải tặc vũ trụ để bảo vệ một hành tinh xa xôi.
+                        </p>
+                    </div>
+                    <a href="https://youtu.be/lnTiOek6pVU?si=b1jGqtIuJ0MasMQh" class="btn btn-primary">Xem ngay</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card__img">
+                    <img src="./img/Spy_×_Family_Code_White_Movie_Teaser_Visual.png"
+                        class="card-img-top" alt="Spy x Family Code: White">
+                </div>
+                <div class="card-body">
+                    <div class="card-2t">
+                        <h5 class="card-title"><a href="detail4.html">Spy x Family Code: White</a></h5>
+                        <p class="card-text">Một chuyến nghỉ đông tưởng chừng yên bình bỗng biến thành hành trình nghẹt
+                            thở khi Anya vô tình cuốn cả gia đình vào một âm mưu quân sự cực kỳ nguy hiểm.</p>
+                    </div>
+                    <a href="https://youtu.be/9jkZLT9HSL8?si=YWGsgJ5J0A-QmsU-" class="btn btn-primary">Xem ngay</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card__img">
+                    <img src="https://thegioidienanh.vn/stores/news_dataimages/thanhtan/032018/14/17/0518_batch_the_call_final_.jpg"
+                        class="card-img-top" alt="The Call">
+                </div>
+                <div class="card-body">
+                    <div class="card-2t">
+                        <h5 class="card-title"><a href="detail5.html">The Call</a></h5>
+                        <p class="card-text">Những cú điện thoại lạ vang lên giữa đêm… Một anh chàng bảo vệ ngờ nghệch
+                            bị cuốn vào hàng loạt tình huống dở khóc dở cười. Hài hước, kịch tính, và đầy bất ngờ với
+                            dàn diễn viên siêu hot!</p>
+                    </div>
+                    <a href="https://youtu.be/ViiVWsTIGAY?si=x6o6N_reTyAupjmru" class="btn btn-primary">Xem ngay</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card__img">
+                    <img src="https://product.hstatic.net/1000376556/product/i_truyen_dai_tap_15_cau_chuyen_xuat_ngoai_va_tran_chien_xuong_rong_bia_b6e2475630874d96bf98dcff54308e2f_1024x1024.jpg"
+                        class="card-img-top"
+                        alt="Shin - Cậu Bé Bút Chì: Chuyện chuyển nhà! Cuộc tấn công của đội quân xương rồng!">
+                </div>
+                <div class="card-body">
+                    <div class="card-2t">
+                        <h5 class="card-title"><a href="detail6.html">Shin - Cậu Bé Bút Chì: Chuyện chuyển nhà! Cuộc tấn
+                                công của đội quân
+                                xương rồng!</a></h5>
+                        <p class="card-text">Gia đình Nohara phải chuyển nhà từ Nhật Bản đến Mexico do công việc của bố
+                            Shin. Trong khi ổn định nơi ở mới, họ phát hiện ra có đội quân xương rồng ăn thịt người đang
+                            rình rập, đe dọa cuộc sống của họ. Shin cùng bố mẹ và bạn bè phải tìm cách sống sót, đối phó
+                            với đội quân nguy hiểm này, đồng thời giải quyết những khó khăn trong việc hòa nhập và thích
+                            nghi với môi trường mới.</p>
+                    </div>
+                    <a href="https://youtu.be/nfPjUm8hj4g?si=AiWAH8ZUvtKF8u7W" class="btn btn-primary">Xem ngay</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card__img">
+                    <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1j2sGy.img?w=768&h=1110&m=6&x=123&y=928&s=611&d=155"
+                        class="card-img-top" alt="Hunter x Hunter: Bóng Ma Đỏ Thẫm">
+                </div>
+                <div class="card-body">
+                    <div class="card-2t">
+                        <h5 class="card-title"><a href="detail7.html">Hunter x Hunter: Bóng Ma Đỏ Thẫm rồng!</a></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <a href="https://youtu.be/dPXYLGnGXIc?si=eDubuZDv84D6MQEs" class="btn btn-primary">Xem ngay</a>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+    <!-- React -->
+    <h3>Phản hồi từ người dùng</h3><br>
+    <div class="card-react">
+        <div class="card-items">
+            <div class="card-item">
+                <img src="https://haycafe.vn/wp-content/uploads/2022/10/hinh-meme-nguoi-que-doi-non-con-ech.jpg"
+                    class="card-img-top" alt="human">
+                <div class="card-item__content">
+                    <h3 class="card-item__name">Người dùng 1</h3>
+                    <p>TUYỆT VỜI LUÔNN!</p>
+                </div>
+
+            </div>
+            <div class="card-item">
+                <img src="https://haycafe.vn/wp-content/uploads/2022/10/hinh-meme-nguoi-que-doi-non-con-ech.jpg"
+                    class="card-img-top" alt="human">
+                <div class="card-item__content">
+                    <h3 class="card-item__name">Người dùng 2</h3>
+                    <p>Web đẹp!</p>
+                </div>
+
+            </div>
+            <div class="card-item">
+                <img src="https://haycafe.vn/wp-content/uploads/2022/10/hinh-meme-nguoi-que-doi-non-con-ech.jpg"
+                    class="card-img-top" alt="human">
+                <div class="card-item__content">
+                    <h3 class="card-item__name">Người dùng 3</h3>
+                    <p>Tuyệt vờiii!!!</p>
+                </div>
+
+            </div>
+            <div class="card-item">
+                <img src="https://haycafe.vn/wp-content/uploads/2022/10/hinh-meme-nguoi-que-doi-non-con-ech.jpg"
+                    class="card-img-top" alt="human">
+                <div class="card-item__content">
+                    <h3 class="card-item__name">Người dùng 4</h3>
+                    <p>Web cuốn quáaaa!</p>
+                </div>
+
+            </div>
+            <div class="card-item">
+                <img src="https://haycafe.vn/wp-content/uploads/2022/10/hinh-meme-nguoi-que-doi-non-con-ech.jpg"
+                    class="card-img-top" alt="human">
+                <div class="card-item__content">
+                    <h3 class="card-item__name">Người dùng 5</h3>
+                    <p>Phim hayyyyyyyyyyyyyy</p>
+                </div>
+
+            </div>
+        </div>
+    </div><br><br>
+    <footer>
+        <h3>Thông tin liên hệ</h3><br>
+        <ul class="contact">
+            <li><a href="https://www.facebook.com/" class="acontact"><ion-icon name="logo-facebook"></ion-icon>
+                    Facebook</a></li>
+            <li><a href="https://www.instagram.com/" class="acontact"><ion-icon name="logo-instagram"></ion-icon>
+                    Instragram</a></li>
+            <li><a href="https://www.tiktok.com/" class="acontact"><ion-icon name="logo-tiktok"></ion-icon> Tiktok</a>
+            </li>
+        </ul>
+        <div class="footer1">
+            <img src="img/5fb1a4d5-f59f-4154-9747-58d17daa5d05.jpg" alt="xem vv">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.032035987264!2d106.61574717401756!3d10.808858258596757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b224555b4d1%3A0xaa7cf57b43e83db1!2sMindX%20Technology%20School%20(T%C3%A2y%20Th%E1%BA%A1nh)!5e0!3m2!1svi!2s!4v1758889951108!5m2!1svi!2s"
+                width="600" height="288" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
