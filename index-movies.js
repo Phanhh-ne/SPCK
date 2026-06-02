@@ -20,22 +20,28 @@ function createPopularCard(movie) {
     const desc = escapeHtml(movie.description);
     const image = escapeHtml(movie.image);
     const trailer = movie.trailer || "#";
+    const category = escapeHtml(movie.category || "Không xác định");
     const detailUrl = `movie-detail.html?id=${encodeURIComponent(movie.id)}`;
 
     return `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 30rem;">
             <div class="card__img">
                 <img src="${image}" class="card-img-top" alt="${name}">
             </div>
             <div class="card-body">
                 <div class="card-2t">
                     <h5 class="card-title">${name}</h5>
-                    <p class="card-text short movie-description">${desc}</p>
+                    <div class="description-container">
+                        <p class="card-text short movie-description">${desc}</p>
+                        <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
+                    </div>
                 </div>
-                <div class="d-flex gap-2 flex-wrap align-items-center mt-2">
-                    <a href="${trailer}" class="btn btn-primary" target="_blank" rel="noopener">Xem ngay</a>
-                    <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
-                    <a href="${detailUrl}" class="btn btn-outline-primary btn-sm">Tìm hiểu thêm</a>
+                <div class="admin-card-footer d-flex flex-column gap-2">
+                    <span class="admin-category">Thể loại: ${category}</span>
+                    <div class="d-flex gap-2 flex-wrap align-items-center mt-2">
+                        <a href="${trailer}" class="btn btn-primary" target="_blank" rel="noopener">Xem ngay</a>
+                        <a href="${detailUrl}" class="btn btn-outline-primary btn-sm">Tìm hiểu thêm</a>
+                    </div>
                 </div>
             </div>
         </div>

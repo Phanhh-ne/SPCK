@@ -34,25 +34,22 @@ function createMovieCard(movie) {
     const detailUrl = `movie-detail.html?id=${encodeURIComponent(movie.id)}`;
 
     return `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 30rem;">
             <div class="card__img">
                 <img src="${image}" class="card-img-top" alt="${name}">
             </div>
             <div class="card-body">
                 <div class="card-2t">
                     <h5 class="card-title">${name}</h5>
-                    <p class="card-text short movie-description">${desc}</p>
+                    <div class="description-container">
+                        <p class="card-text short movie-description">${desc}</p>
+                        <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
+                    </div>
                 </div>
-                <p class="card-text"><strong>Thời lượng:</strong> ${escapeHtml(movie.duration || "-")} phút</p>
-                <p class="card-text"><strong>Đạo diễn:</strong> ${escapeHtml(movie.director || "-")}</p>
-                <p class="card-text"><strong>Diễn viên:</strong> ${escapeHtml(movie.cast || "-")}</p>
-                <p class="card-text"><strong>Ngôn ngữ:</strong> ${escapeHtml(movie.language || "-")}</p>
-                <p class="card-text"><strong>Trailer:</strong> <a href="${trailer}" target="_blank" rel="noopener">Xem trailer</a></p>
                 <div class="admin-card-footer d-flex flex-column gap-2">
                     <span class="admin-category">Thể loại: ${categoryLabel}</span>
                     <div class="d-flex gap-2 flex-wrap align-items-center">
                         <a href="${trailer}" class="btn btn-primary" target="_blank" rel="noopener">Xem ngay</a>
-                        <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
                         <a href="${detailUrl}" class="btn btn-outline-primary btn-sm">Tìm hiểu thêm</a>
                     </div>
                 </div>

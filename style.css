@@ -207,6 +207,13 @@ a {
     color: #333;
 }
 
+.description-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
 .card-text.short {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -216,6 +223,8 @@ a {
     white-space: normal;
     overflow-wrap: break-word;
     word-break: break-word;
+    flex: 1;
+    min-width: 0;
 }
 
 .card-text.expanded {
@@ -224,6 +233,8 @@ a {
     white-space: normal;
     overflow-wrap: break-word;
     word-break: break-word;
+    flex: 1;
+    min-width: 0;
 }
 
 .read-more-btn {
@@ -233,6 +244,8 @@ a {
     background: transparent;
     color: #0d6efd;
     cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* FOOTER */

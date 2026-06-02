@@ -211,7 +211,7 @@ async function renderMovies() {
             const movie = docItem.data();
             const categoryLabel = getCategoryLabel(movie.category);
             const card = `
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 30rem;">
                     <div class="card__img">
                         <img src="${movie.image}" class="card-img-top" alt="${movie.name}">
                     </div>

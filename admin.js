@@ -149,7 +149,7 @@ async function renderProducts() {
         querySnapshot.forEach((docItem) => {
             const product = docItem.data();
             const card = `
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 30rem;">
                     <div class="card__img">
                         <img src="${product.image}" class="card-img-top" alt="${product.name}">
                     </div>

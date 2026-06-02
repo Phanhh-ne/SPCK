@@ -22,7 +22,7 @@ async function loadProducts() {
         const product = doc.data();
 
         const html = `
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 30rem;">
     <div class="card__img">
       <img src="${product.image}" class="card-img-top">
     </div>
