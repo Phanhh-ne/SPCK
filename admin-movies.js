@@ -10,6 +10,10 @@ const movieList = document.getElementById("movieList");
 const movieName = document.getElementById("name");
 const movieTrailer = document.getElementById("trailer");
 const movieCategory = document.getElementById("category");
+const movieDuration = document.getElementById("duration");
+const movieDirector = document.getElementById("director");
+const movieCast = document.getElementById("cast");
+const movieLanguage = document.getElementById("language");
 const movieDescription = document.getElementById("description");
 const imageFile = document.getElementById("image-file");
 
@@ -32,9 +36,17 @@ function clearErrors() {
     document.getElementById("error-name").textContent = "";
     document.getElementById("error-image").textContent = "";
     document.getElementById("error-trailer").textContent = "";
+    document.getElementById("error-duration").textContent = "";
+    document.getElementById("error-director").textContent = "";
+    document.getElementById("error-cast").textContent = "";
+    document.getElementById("error-language").textContent = "";
     document.getElementById("error-description").textContent = "";
     movieName.classList.remove("is-invalid");
     movieTrailer.classList.remove("is-invalid");
+    movieDuration.classList.remove("is-invalid");
+    movieDirector.classList.remove("is-invalid");
+    movieCast.classList.remove("is-invalid");
+    movieLanguage.classList.remove("is-invalid");
     movieDescription.classList.remove("is-invalid");
     hideFormAlert();
 }
@@ -91,6 +103,34 @@ function validateMovie() {
         isValid = false;
     }
 
+    if (!movieDuration.value.trim()) {
+        document.getElementById("error-duration").textContent = "❌ Vui lòng nhập thời lượng";
+        movieDuration.classList.add("is-invalid");
+        missingFields.push("Thời lượng");
+        isValid = false;
+    }
+
+    if (!movieDirector.value.trim()) {
+        document.getElementById("error-director").textContent = "❌ Vui lòng nhập đạo diễn";
+        movieDirector.classList.add("is-invalid");
+        missingFields.push("Đạo diễn");
+        isValid = false;
+    }
+
+    if (!movieCast.value.trim()) {
+        document.getElementById("error-cast").textContent = "❌ Vui lòng nhập diễn viên";
+        movieCast.classList.add("is-invalid");
+        missingFields.push("Diễn viên");
+        isValid = false;
+    }
+
+    if (!movieLanguage.value.trim()) {
+        document.getElementById("error-language").textContent = "❌ Vui lòng nhập ngôn ngữ";
+        movieLanguage.classList.add("is-invalid");
+        missingFields.push("Ngôn ngữ");
+        isValid = false;
+    }
+
     if (!movieDescription.value.trim()) {
         document.getElementById("error-description").textContent = "❌ Vui lòng nhập mô tả phim";
         movieDescription.classList.add("is-invalid");
@@ -124,6 +164,10 @@ if (movieForm) {
         const name = movieName.value.trim();
         const trailer = movieTrailer.value.trim();
         const category = movieCategory.value;
+        const duration = movieDuration.value.trim();
+        const director = movieDirector.value.trim();
+        const cast = movieCast.value.trim();
+        const language = movieLanguage.value.trim();
         const description = movieDescription.value.trim();
 
         try {
@@ -134,6 +178,10 @@ if (movieForm) {
                 image,
                 trailer,
                 category,
+                duration,
+                director,
+                cast,
+                language,
                 description
             });
 
@@ -172,6 +220,10 @@ async function renderMovies() {
                             <h5 class="card-title">${movie.name}</h5>
                             <p class="card-text short movie-description">${movie.description}</p>
                         </div>
+                        <p class="card-text text-break"><strong>Thời lượng:</strong> ${movie.duration || "-"} phút</p>
+                        <p class="card-text text-break"><strong>Đạo diễn:</strong> ${movie.director || "-"}</p>
+                        <p class="card-text text-break"><strong>Diễn viên:</strong> ${movie.cast || "-"}</p>
+                        <p class="card-text text-break"><strong>Ngôn ngữ:</strong> ${movie.language || "-"}</p>
                         <p class="card-text text-break"><strong>Trailer:</strong> <a href="${movie.trailer}" target="_blank">Xem trailer</a></p>
                         <div class="admin-card-footer d-flex flex-column gap-2">
                             <span class="admin-category">Thể loại: ${categoryLabel}</span>

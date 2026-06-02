@@ -133,11 +133,16 @@ h3 {
     min-width: 0;
 }
 
+h5{
+    text-align: center;
+}
+
 .card-title,
 .card-text,
 .movie-description,
 .detail-title,
 .detail-text {
+    text-align: center;
     white-space: normal;
     overflow-wrap: break-word;
     word-break: break-word;

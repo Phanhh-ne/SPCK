@@ -40,6 +40,10 @@ function renderMovie(movie) {
     const poster = document.getElementById("detail-poster");
     const title = document.getElementById("detail-title");
     const category = document.getElementById("detail-category");
+    const duration = document.getElementById("detail-duration");
+    const director = document.getElementById("detail-director");
+    const cast = document.getElementById("detail-cast");
+    const language = document.getElementById("detail-language");
     const description = document.getElementById("detail-description");
     const trailerLink = document.getElementById("detail-trailer-link");
     const watchBtn = document.getElementById("detail-watch-btn");
@@ -50,6 +54,10 @@ function renderMovie(movie) {
     }
     if (title) title.textContent = movie.name || "Không có tên";
     if (category) category.textContent = getCategoryLabel(movie.category);
+    if (duration) duration.textContent = movie.duration || "-";
+    if (director) director.textContent = movie.director || "-";
+    if (cast) cast.textContent = movie.cast || "-";
+    if (language) language.textContent = movie.language || "-";
     if (description) description.textContent = movie.description || "";
     if (trailerLink) {
         trailerLink.href = movie.trailer || "#";

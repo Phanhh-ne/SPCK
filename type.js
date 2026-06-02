@@ -43,6 +43,10 @@ function createMovieCard(movie) {
                     <h5 class="card-title">${name}</h5>
                     <p class="card-text short movie-description">${desc}</p>
                 </div>
+                <p class="card-text"><strong>Thời lượng:</strong> ${escapeHtml(movie.duration || "-")} phút</p>
+                <p class="card-text"><strong>Đạo diễn:</strong> ${escapeHtml(movie.director || "-")}</p>
+                <p class="card-text"><strong>Diễn viên:</strong> ${escapeHtml(movie.cast || "-")}</p>
+                <p class="card-text"><strong>Ngôn ngữ:</strong> ${escapeHtml(movie.language || "-")}</p>
                 <p class="card-text"><strong>Trailer:</strong> <a href="${trailer}" target="_blank" rel="noopener">Xem trailer</a></p>
                 <div class="admin-card-footer d-flex flex-column gap-2">
                     <span class="admin-category">Thể loại: ${categoryLabel}</span>
