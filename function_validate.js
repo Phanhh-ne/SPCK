@@ -9,26 +9,32 @@ export const styleText = (key) => {
 export const validateEmail = (email) => {
     // Lấy userList từ localStorage
     const getLocalStorage = localStorage.getItem("userList")
-    let users = JSON.parse(getLocalStorage) // lấy 
-    // Lặp qua từng phần từ bên trong mảng
+    if (!getLocalStorage) return false
+    let users;
+    try {
+        users = JSON.parse(getLocalStorage) || []
+    } catch (e) {
+        return false
+    }
     for (let data of users) {
-        // Kiểm tra email người dùng nhập vào có tồn tại trong local hay chưa
         if (email === data.email) {
-            // Nếu tồn tại thì hàm trả về True
-            return true // email đã tồn tại
+            return true
         }
     }
-    // Lặp qua không thấy hết thì trả về false
-    return false // email chưa tồn tại -> có thể đăng ký được
+    return false
 }
 
 // check password duplicated: hỗ trợ kiểm tra có trùng với nhập lại password không
 export const validatePassword = (pwd) => {
     // get value of Local Storage
     let getLocalStorage = localStorage.getItem('userList')
-
-    let users = JSON.parse(getLocalStorage)
-
+    if (!getLocalStorage) return false
+    let users
+    try {
+        users = JSON.parse(getLocalStorage) || []
+    } catch (e) {
+        return false
+    }
     for (let data of users) {
         if (pwd === data.password) {
             return true

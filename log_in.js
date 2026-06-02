@@ -1,31 +1,46 @@
-import { styleText, validateEmail, validatePassword } from "./function_validate.js";
 
-let buttonLogIn = document.getElementById("btn-Login")
+import { auth, googleProvider } from "./firebase-config.js";
+import { signInWithEmailAndPassword, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 
-buttonLogIn.addEventListener("click", () => {
-    let emailLogin = document.getElementById("email-Login").value
-    let pwdLogin = document.getElementById("pwd-Login").value
+const buttonLogIn = document.getElementById("btn-Login");
+const icon = document.querySelector(".fa-google-plus-g");
+const googleBtn = icon ? icon.parentElement : null;
 
-    let textLogin = document.getElementById("textLogin")
-    styleText(textLogin) // giúp chia file và tối ưu code hơn
+if (buttonLogIn) {
+    buttonLogIn.addEventListener("click", async () => {
+        const email = document.getElementById("email-Login").value;
+        const password = document.getElementById("pwd-Login").value;
+        const textLogin = document.getElementById("textLogin");
 
-    let getLocalStorage = localStorage.getItem("userList")
-    if (getLocalStorage === null || getLocalStorage.length === undefined) {
-        textLogin.innerText = "* Tài khoản không tồn tại"
-    } else {
-        let isvalueEmail = validateEmail(emailLogin)
-        let isvaluepwd = validatePassword(pwdLogin)
-        
-        if (isvalueEmail && isvaluepwd) { // nếu 2 cái đó true
-            window.location.href = "index.html"
-            textLogin.innerText = ""
-        } else {
-            textLogin.innerText = "* Vui lòng kiểm tra lại tài khoản hoặc mật khẩu"
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            localStorage.setItem("loggedInEmail", email);
+            alert("Đăng nhập thành công!");
+            window.location.href = "index.html";
+            if (textLogin) textLogin.innerText = "";
+        } catch (error) {
+            if (textLogin) {
+                textLogin.style.color = "red";
+                textLogin.innerText = "* Sai tài khoản hoặc mật khẩu";
+            }
         }
-    }
-})
+    });
+}
 
-
+if (googleBtn) {
+    googleBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        try {
+            const result = await signInWithPopup(auth, googleProvider);
+            if (result?.user?.email) {
+                localStorage.setItem("loggedInEmail", result.user.email);
+            }
+            alert("Chào mừng " + result.user.displayName);
+        } catch (error) {
+            console.error(error);
+        }
+    });
+}
 
 
 

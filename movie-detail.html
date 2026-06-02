@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Calistoga&family=Lalezar&family=Oswald:wght@200..700&family=Playwrite+CA:wght@100..400&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Chi tiết phim</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">PA Films</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="type.html">Thể loại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shopping.html">Mua sắm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-movies.html">Quản lý phim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Quản lý mua sắm</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <span id="nav-name">
+                            <span id="nameuser"></span>
+                        </span>
+                    </li>
+                    <li class="nav-item ms-2" id="logoutNavItem" style="display: none;">
+                        <button type="button" class="btn btn-outline-danger btn-sm" id="logoutBtn">Đăng xuất</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page">
+        <div id="movie-detail-loading" class="text-center py-5 mt-5">
+            <p class="text-muted">Đang tải thông tin phim...</p>
+        </div>
+
+        <div id="movie-detail-error" class="alert alert-warning mt-5 d-none" role="alert"></div>
+
+        <div id="movie-detail-content" class="phim d-none">
+            <div class="detail__img__divtira">
+                <img id="detail-poster" src="" class="detail-img-top" alt="">
+                <div class="detail__title__rate">
+                    <h3 id="detail-title" class="detail-title"></h3><br>
+                    <!-- <span><strong>Đánh giá: </strong><ion-icon name="star"></ion-icon><ion-icon
+                            name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                            name="star"></ion-icon><ion-icon name="star-half-outline"></ion-icon></span><br> -->
+                    <span><strong>Thể loại:</strong> <span id="detail-category"></span></span><br>
+                    <span><strong>Trailer:</strong> <a id="detail-trailer-link" href="#" target="_blank"
+                            rel="noopener">Xem trailer</a></span>
+                </div>
+            </div>
+
+            <div class="detail-content">
+                <div class="content">
+                    <h5>Nội dung:</h5>
+                    <p id="detail-description" class="detail-text"></p>
+                </div>
+                <a id="detail-watch-btn" href="#" class="btn btn-primary" target="_blank" rel="noopener">Xem ngay</a>
+            </div><br><br>
+        </div>
+
+        <div id="movie-detail-empty" class="text-center py-5 mt-5 d-none">
+            <p class="text-muted">Chưa chọn phim. Hãy bấm <strong>Tìm hiểu thêm</strong> trên thẻ phim ở Trang chủ,
+                Thể loại hoặc Quản lý phim.</p>
+            <a href="index.html" class="btn btn-primary">Về trang chủ</a>
+            <a href="type.html" class="btn btn-outline-secondary ms-2">Xem thể loại</a>
+        </div>
+    </div><br><br>
+
+    <footer>
+        <h3>Thông tin liên hệ</h3><br>
+        <ul class="contact">
+            <li><a href="https://www.facebook.com/" class="acontact"><ion-icon name="logo-facebook"></ion-icon>
+                    Facebook</a></li>
+            <li><a href="https://www.instagram.com/" class="acontact"><ion-icon name="logo-instagram"></ion-icon>
+                    Instragram</a></li>
+            <li><a href="https://www.tiktok.com/" class="acontact"><ion-icon name="logo-tiktok"></ion-icon> Tiktok</a>
+            </li>
+        </ul>
+        <div class="footer1">
+            <img src="blob:https://chat.zalo.me/e3f32788-77da-400d-8c15-a14f0e3cea09" alt="xem vv">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.032035987264!2d106.61574717401756!3d10.808858258596757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b224555b4d1%3A0xaa7cf57b43e83db1!2sMindX%20Technology%20School%20(T%C3%A2y%20Th%E1%BA%A1nh)!5e0!3m2!1svi!2s!4v1758889951108!5m2!1svi!2s"
+                width="600" height="288" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script type="module" src="movie-detail.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
