@@ -119,6 +119,15 @@ h3 {
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    align-items: stretch;
+}
+
+.type__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .card {
@@ -127,14 +136,19 @@ h3 {
     background-color: #ffedaa;
     overflow: visible;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .type__items .card {
     min-width: 0;
+    height: 100%;
 }
 
 h5{
     text-align: center;
+    width: 100%;
 }
 
 .card-title,
@@ -177,6 +191,11 @@ a {
 
 .card-2t {
     min-height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-react {
@@ -191,11 +210,15 @@ a {
 .card-body {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
-.card-body .btn {
-    align-self: flex-start;
+.admin-card-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .admin-card-footer {
