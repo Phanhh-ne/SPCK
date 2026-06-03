@@ -157,13 +157,15 @@ async function renderProducts() {
                         <div class="card-2t">
                             <h5 class="card-title">${product.name}</h5>
                             <p class="card-text price"><ion-icon name="pricetags-outline"></ion-icon>${product.price}₫</p>
-                            <p class="card-text short shoppingcard-text">Mô tả: ${product.description}</p>
+                            <div class="description-container">
+                                <p class="card-text short shoppingcard-text">Mô tả: ${product.description}</p>
+                                <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
+                            </div>
                         </div>
                         <div class="admin-card-footer d-flex flex-column gap-2">
                             <span class="admin-category">${product.category}</span>
                             <div class="d-flex gap-2 flex-wrap align-items-center">
-                              <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
-                              <button class="btn btn-danger delete-btn" onclick="deleteProduct('${docItem.id}')">Xóa</button>
+                                <button class="btn btn-danger delete-btn" onclick="deleteProduct('${docItem.id}')">Xóa</button>
                             </div>
                         </div>
                     </div>

@@ -198,11 +198,22 @@ body {
 .card-body {
     padding: 15px;
     display: flex;
-    flex-direction: column;
     gap: 10px;
     width: 100%;
     box-sizing: border-box;
     min-width: 0;
+}
+
+.admin-list .list__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card-body,
+.admin-card-content {
+    flex-direction: column;
 }
 
 .card-2t {
@@ -241,6 +252,7 @@ body {
     flex-wrap: wrap;
     width: 100%;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .admin-price,
