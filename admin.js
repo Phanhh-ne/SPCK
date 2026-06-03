@@ -149,7 +149,7 @@ async function renderProducts() {
         querySnapshot.forEach((docItem) => {
             const product = docItem.data();
             const card = `
-                <div class="card" style="width: 30rem;">
+                <div class="card">
                     <div class="card__img">
                         <img src="${product.image}" class="card-img-top" alt="${product.name}">
                     </div>
@@ -174,7 +174,7 @@ async function renderProducts() {
             cardsHtml.push(card);
         });
 
-        productList.innerHTML = `<div class="d-flex flex-wrap gap-3 justify-content-center">${cardsHtml.join("")}</div>`;
+        productList.innerHTML = cardsHtml.join("");
     } catch (err) {
         console.error("Lỗi hiển thị sản phẩm:", err);
         productList.innerHTML = `<p class="text-danger">Lỗi tải sản phẩm: ${err.message}</p>`;

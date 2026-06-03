@@ -86,16 +86,26 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .admin-list .card,
 .card-container .card {
-    width: 18rem;
-    max-width: 100%;
+    flex: 0 1 calc(33.333% - 20px);
+    max-width: 18rem;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+}
+
+.admin-products-page .card-container .card {
+    flex: 0 1 30rem;
+    max-width: 30rem;
 }
 
 /* Ensure shopping card descriptions don't overflow and expand cleanly */
@@ -209,6 +219,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+    gap: 20px;
 }
 
 .card-body,
