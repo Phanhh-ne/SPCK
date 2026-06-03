@@ -344,6 +344,7 @@ if (checkoutForm) {
     const name = document.getElementById('shipName').value.trim();
     const phone = document.getElementById('shipPhone').value.trim();
     const address = document.getElementById('shipAddress').value.trim();
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked')?.value || 'cash';
 
     if (!name || !phone || !address) {
       alert('Vui lòng điền đầy đủ thông tin giao hàng.');
@@ -360,6 +361,7 @@ if (checkoutForm) {
 
     const orderData = {
       customer: { name, phone, address },
+      paymentMethod: paymentMethod,
       items: items.map((item) => ({
         sku: item.sku,
         title: item.title,
