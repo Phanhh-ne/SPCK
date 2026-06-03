@@ -15,12 +15,21 @@ function escapeHtml(str) {
         .replaceAll("'", "&#039;");
 }
 
+function getCategoryLabel(category) {
+    const labels = {
+        hoathinh: "Hoạt hình",
+        anime: "Anime",
+        haihuoc: "Hài hước"
+    };
+    return labels[category] || category || "Không xác định";
+}
+
 function createPopularCard(movie) {
     const name = escapeHtml(movie.name);
     const desc = escapeHtml(movie.description);
     const image = escapeHtml(movie.image);
     const trailer = movie.trailer || "#";
-    const category = escapeHtml(movie.category || "Không xác định");
+    const categoryLabel = escapeHtml(getCategoryLabel(movie.category));
     const detailUrl = `movie-detail.html?id=${encodeURIComponent(movie.id)}`;
 
     return `
@@ -37,7 +46,7 @@ function createPopularCard(movie) {
                     </div>
                 </div>
                 <div class="admin-card-footer d-flex flex-column gap-2">
-                    <span class="admin-category">Thể loại: ${category}</span>
+                    <span class="admin-category">Thể loại: ${categoryLabel}</span>
                     <div class="d-flex gap-2 flex-wrap align-items-center mt-2">
                         <a href="${trailer}" class="btn btn-primary" target="_blank" rel="noopener">Xem ngay</a>
                         <a href="${detailUrl}" class="btn btn-outline-primary btn-sm">Tìm hiểu thêm</a>

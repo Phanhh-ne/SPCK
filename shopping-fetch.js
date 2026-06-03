@@ -103,7 +103,7 @@ function renderProductSection(sectionName, products, targetEl) {
       });
 
       return `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 30rem;">
           <div class="card__img">
             <img src="${image}" class="card-img-top" alt="${title}">
           </div>
@@ -111,11 +111,15 @@ function renderProductSection(sectionName, products, targetEl) {
             <div class="card-2t">
               <h5 class="card-title">${title}</h5>
               <p class="card-text price"><ion-icon name="pricetags-outline"></ion-icon>${formatVnd(priceNum)}</p>
-              <p class="card-text short shoppingcard-text">Mô tả: ${desc}</p>
+              <div class="description-container">
+                <p class="card-text short movie-description">${desc}</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
+              </div>
             </div>
-            <div class="d-flex gap-2 align-items-center">
-              <button class="btn btn-primary add-to-cart" data-sku="${escapeHtml(sku)}">Thêm</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
+            <div class="admin-card-footer d-flex flex-column gap-2">
+              <div class="d-flex gap-2 flex-wrap align-items-center">
+                <button class="btn btn-primary add-to-cart" data-sku="${escapeHtml(sku)}">Thêm</button>
+              </div>
             </div>
           </div>
         </div>
@@ -123,7 +127,7 @@ function renderProductSection(sectionName, products, targetEl) {
     })
     .join('');
 
-  targetEl.innerHTML = `<div class="d-flex flex-wrap gap-3 justify-content-center">${cardsHtml}</div>`;
+  targetEl.innerHTML = `<div class="list__items">${cardsHtml}</div>`;
 }
 
 async function fetchAndRender() {

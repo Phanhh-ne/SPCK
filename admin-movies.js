@@ -218,7 +218,10 @@ async function renderMovies() {
                     <div class="card-body">
                         <div class="card-2t">
                             <h5 class="card-title">${movie.name}</h5>
-                            <p class="card-text short movie-description">${movie.description}</p>
+                            <div class="description-container">
+                                <p class="card-text short movie-description">${movie.description}</p>
+                                <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
+                            </div>
                         </div>
                         <p class="card-text text-break"><strong>Thời lượng:</strong> ${movie.duration || "-"} phút</p>
                         <p class="card-text text-break"><strong>Đạo diễn:</strong> ${movie.director || "-"}</p>
@@ -229,7 +232,6 @@ async function renderMovies() {
                             <span class="admin-category">Thể loại: ${categoryLabel}</span>
                             <div class="d-flex gap-2 flex-wrap align-items-center">
                                 <a href="${movie.trailer}" target="_blank" class="btn btn-primary">Xem ngay</a>
-                                <button type="button" class="btn btn-outline-secondary btn-sm read-more-btn">Xem thêm</button>
                                 <a href="movie-detail.html?id=${docItem.id}" class="btn btn-outline-primary btn-sm">Tìm hiểu thêm</a>
                                 <button class="btn btn-danger delete-btn" onclick="deleteMovie('${docItem.id}')">Xóa</button>
                             </div>
@@ -240,7 +242,7 @@ async function renderMovies() {
             cardsHtml.push(card);
         });
 
-        movieList.innerHTML = `<div class="d-flex flex-wrap gap-3 justify-content-center">${cardsHtml.join("")}</div>`;
+        movieList.innerHTML = `<div class="list__items">${cardsHtml.join("")}</div>`;
     } catch (err) {
         console.error(err);
     }
