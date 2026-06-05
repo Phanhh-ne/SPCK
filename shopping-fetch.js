@@ -323,6 +323,8 @@ if (clearCartBtn) {
   });
 }
 
+
+// Thanh toán
 if (checkoutBtn) {
   checkoutBtn.addEventListener('click', () => {
     const cart = loadCart();
